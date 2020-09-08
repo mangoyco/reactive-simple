@@ -1,0 +1,32 @@
+{
+  "name": "reactive-simple",
+  "version": "1.0.0",
+  "description": "study vue reactive",
+  "main": "reactive.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mangoyco/reactive-simple.git"
+  },
+  "keywords": [
+    "reactive"
+  ],
+  "author": "wangyanchao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mangoyco/reactive-simple/issues"
+  },
+  "homepage": "https://github.com/mangoyco/reactive-simple#readme",
+  "dependencies": {
+    "jest": "^26.4.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.3.0",
+    "babel-preset-env": "^1.7.0",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
