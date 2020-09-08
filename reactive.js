@@ -1,4 +1,4 @@
-const effects = new Map()
+const effects = new WeakMap()
 let currentEffect = null
 
 function reactive(obj) {
@@ -6,12 +6,15 @@ function reactive(obj) {
     get(obj, prop, proxy) {
       // debugger
       if (!effects.has(obj)) {
-        effects.set(obj, new Map())
+        effects.set(obj, new WeakMap())
       }
       if (!effects.get(obj).has(prop)) {
         effects.get(obj).set(prop, [])
       }
       effects.get(obj).get(prop).push(currentEffect)
+      if (Object.prototype.toString.call(obj[prop]) === '[object Object]') {
+        return reactive(obj[prop])
+      }
       return obj[prop]
     },
     set(obj, prop, val, proxy) {
